@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #E7E7E7;
+    --dark: #22252D;
+    --lightDark: #292D36;
+    --midDark: #272B33;
+    --pureDark: #000;
+    --pureWhite: #fff;
+    --toggle: #fff;
+    --toggle1: gray;
+}
+
+body.light-mode {
+    --dark: #fff;
+    --lightDark: #F9F9F9;
+    --midDark: #F7F7F7;
+    --pureDark: #fff;
+    --pureWhite: #000;
+    --toggle: #b1b1b1;
+    --toggle1: #000;
+}
+
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 270px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--dark);
+
+    &>.display-wrapper {
+        padding: 80px 0 20px 0;
+        position: relative;
+
+        &>div {
+            background-color: var(--lightDark);
+            color: gray;
+            width: 70px;
+            height: 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translate(-50%);
+
+            &>i:nth-child(1) {
+                cursor: pointer;
+                color: var(--toggle1);
+            }
+
+            &>i:nth-child(2) {
+                cursor: pointer;
+                color: var(--toggle);
+            }
+        }
+
+        &>input {
+            width: 100%;
+            text-align: end;
+            padding: 5px 20px;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            color: var(--pureWhite);
+        }
+
+        &>#display1 {
+            color: #a4a4a4;
+        }
+
+        &>#display2 {
+            font-size: 32px;
+        }
+    }
+
+    &>.btn-wrapper {
+        border-radius: 20px;
+        padding: 20px 0;
+        text-align: center;
+        background-color: var(--lightDark);
+
+        &>button {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: var(--midDark);
+            color: var(--pureWhite);
+            cursor: pointer;
+        }
+
+        &>.op {
+            color: #00b7b7;
+        }
+
+        &>.dot {
+            font-size: 25px;
+        }
+
+        &>.op2 {
+            color: #F17B7A;
+            font-size: 25px;
+        }
+    }
+}
